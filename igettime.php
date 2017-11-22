@@ -1,7 +1,7 @@
 <?php
 
 //$json = json_decode($input);
-$file_json = "data/server_time{$BUILD_TYPE}.json";
+$file_json = "/var/www/data/{$mydatabase}_server_time_{$BUILD_TYPE}.json";
 
 if ($IS_DEVELOPMENT && is_file($file_json)) {
     $content = file_get_contents($file_json);

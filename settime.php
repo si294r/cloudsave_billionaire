@@ -3,7 +3,7 @@
 if ($IS_DEVELOPMENT == true) {
     
     $data_string = $input;
-    $result = file_get_contents('http://alegrium5.alegrium.com/billionaire/cloudsave/?isettime-dev'.$BUILD_TYPE, null, stream_context_create(
+    $result = file_get_contents($url_static_time.'?isettime-dev'.$BUILD_TYPE, null, stream_context_create(
             array(
                 'http' => array(
                     'method' => 'POST',

@@ -2,7 +2,7 @@
 
 $iservice = $IS_DEVELOPMENT == true ? "igettime-dev".$BUILD_TYPE : "igettime";
 
-$result = file_get_contents('http://alegrium5.alegrium.com/billionaire/cloudsave/?'.$iservice, null, stream_context_create(
+$result = file_get_contents($url_static_time.'?'.$iservice, null, stream_context_create(
         array(
             'http' => array(
                 'method' => 'POST',
